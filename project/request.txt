@@ -1,0 +1,26 @@
+《C++程序设计》 实验二
+======================================================
+设计一个Date类，包括：
+	三个私有数据： year, month, day   均为int类型
+	两个构造函数：
+（1） Date(int y=1900, int m=1, int d=1);
+（2） Date(const string& s);   
+接受 格式为“yyyy/mm/dd”或“yyyy-mm-dd”的字符串
+	若干公有成员函数：
+（1）	void set( int y, int m, int d );  设置日期
+（2）	bool isValid(); 判断当前对象年月日的值是否构成一个有效日期
+（3）	bool isLeapYear(); 判断当前对象是否闰年
+（4）	int toInt( ) ; 把当前对象日期转换成一个整数（YYYYMMDD），比如20230315
+（5）	Date lastDay( ); 返回当前对象的前一天日期（当前对象不变）
+（6）	Date nextDay( ); 返回当前对象的后一天日期（当前对象不变）
+（7）	void print(); 打印日期，格式参考:“yyyy/mm/dd”或“yyyy-mm-dd”
+（8）	int getYear(); 返回当前对象的year值
+（9）	int getMonth(); 返回当前对象的month值
+（10）	int getDay(); 返回当前对象的day值
+（11）	void setYear(int y); 把y的值赋值给当前对象的year
+（12）	void setMonth( int m); 把m的值赋值给当前对象的month
+（13）	void setDay( int d); 把d的值赋值给当前对象的day
+（14）	int compare(const Date &d); 判断当前对象和d的大小关系
+返回值==0，表示两个日期相等；返回值>0，表示当前对象的日期更大（更新）；返回值<0，表示d的日期更大（更新）。
+
+同时，要求编写主函数，在主函数中，定义Date类的对象，并自行设计合理流程调用构造函数及成员函数进行充分测试（每个构造函数和成员函数都测试到）。
